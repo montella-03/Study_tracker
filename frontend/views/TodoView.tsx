@@ -6,7 +6,7 @@ import {Button} from "@hilla/react-components/Button.js";
 import {Checkbox} from "@hilla/react-components/Checkbox.js";
 import {motion} from "framer-motion";
 
-export function TodoView() {
+export const TodoView = () => {
     const [todos, setTodos] = useState<Todo[]>([]);
     const [task, setTask] = useState('');
 
@@ -15,15 +15,15 @@ export function TodoView() {
     }, []);
 
 
-    async function addTodo() {
+    const addTodo = async () => {
         const saved = await TodoEndpoint.add(task);
         if(saved){
             setTodos([...todos, saved]);
             setTask('');
         }
-    }
+    };
 
-    async function updateTodo(todo: Todo, done: boolean) {
+   const updateTodo= async (todo: Todo, done: boolean)=> {
         const saved = await TodoEndpoint.update({
             ...todo, done
         });
@@ -49,4 +49,4 @@ export function TodoView() {
             ))}
         </div>
     );
-}
+};

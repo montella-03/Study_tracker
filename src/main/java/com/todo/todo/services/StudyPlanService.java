@@ -10,4 +10,5 @@ public interface StudyPlanService {
     StudyPlan getPlan(Long id);
     void deletePlan(Long id);
 
+    StudyPlan getPlanByName(String math);
 }

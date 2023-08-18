@@ -44,4 +44,9 @@ public class StudyPlanImpl implements StudyPlanService{
         studyPlanRepository.deleteById(id);
 
     }
+
+    @Override
+    public StudyPlan getPlanByName(String math) {
+        return studyPlanRepository.findByName(math).orElseThrow(()->new RuntimeException("Plan does not exist"));
+    }
 }
