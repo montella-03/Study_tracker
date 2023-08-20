@@ -5,6 +5,7 @@ import {TextField} from "@hilla/react-components/TextField.js";
 import {Button} from "@hilla/react-components/Button.js";
 import {Checkbox} from "@hilla/react-components/Checkbox.js";
 import {motion} from "framer-motion";
+import Header from "Frontend/components/Header";
 
 export const TodoView = () => {
     const [todos, setTodos] = useState<Todo[]>([]);
@@ -33,10 +34,10 @@ export const TodoView = () => {
     }
 
     return (
-        <div className="p-m">
-            <h1>Hilla cool todo!</h1>
+        <div className="p-m ml-4">
+            <Header/>
 
-            <motion.div  whileHover={{scale:1.2}}  className="flex gap-s">
+            <motion.div  whileHover={{scale:0.8}}  className="flex gap-s">
                 <TextField value={task} onChange={e => setTask(e.target.value)}/>
                 <Button theme="primary" onClick={addTodo}>Add</Button>
             </motion.div>
