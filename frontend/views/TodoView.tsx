@@ -5,8 +5,9 @@ import {TextField} from "@hilla/react-components/TextField.js";
 import {Button} from "@hilla/react-components/Button.js";
 import {Checkbox} from "@hilla/react-components/Checkbox.js";
 import {motion} from "framer-motion";
+import Header from "Frontend/components/Header";
 
-export function TodoView() {
+export const TodoView = () => {
     const [todos, setTodos] = useState<Todo[]>([]);
     const [task, setTask] = useState('');
 
@@ -15,15 +16,15 @@ export function TodoView() {
     }, []);
 
 
-    async function addTodo() {
+    const addTodo = async () => {
         const saved = await TodoEndpoint.add(task);
         if(saved){
             setTodos([...todos, saved]);
             setTask('');
         }
-    }
+    };
 
-    async function updateTodo(todo: Todo, done: boolean) {
+   const updateTodo= async (todo: Todo, done: boolean)=> {
         const saved = await TodoEndpoint.update({
             ...todo, done
         });
@@ -33,10 +34,10 @@ export function TodoView() {
     }
 
     return (
-        <div className="p-m">
-            <h1>Hilla cool todo!</h1>
+        <div className="p-m ml-4">
+            <Header/>
 
-            <motion.div  whileHover={{scale:1.2}}  className="flex gap-s">
+            <motion.div  whileHover={{scale:0.8}}  className="flex gap-s">
                 <TextField value={task} onChange={e => setTask(e.target.value)}/>
                 <Button theme="primary" onClick={addTodo}>Add</Button>
             </motion.div>
@@ -49,4 +50,4 @@ export function TodoView() {
             ))}
         </div>
     );
-}
+};
