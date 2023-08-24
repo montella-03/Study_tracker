@@ -3,9 +3,16 @@ import {h1Style, iconStyle} from "Frontend/constants/Styles";
 import {Tabs} from "@hilla/react-components/Tabs";
 import {Tab} from "@hilla/react-components/Tab";
 import {Icon} from "@hilla/react-components/Icon";
+import {useNavigate} from "react-router-dom";
 
 const Header = () => {
-  return (
+    const navigate = useNavigate();
+
+    const navigation=()=> {
+        navigate('/orders');
+    }
+
+    return (
     <>
         <h1 slot="drawer" style={h1Style}>
             StudyPlanz
@@ -22,7 +29,7 @@ const Header = () => {
             <Tab>
                 <a tabIndex={-1}>
                     <Icon icon="vaadin:cart" style={iconStyle} />
-                    <span>Orders</span>
+                    <span onClick={navigation}>Orders</span>
                 </a>
             </Tab>
             {/* end::snippet[] */}

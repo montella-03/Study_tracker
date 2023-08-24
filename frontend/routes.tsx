@@ -1,9 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom';
-import AppView from "Frontend/views/AppView";
+import OrdersView from "Frontend/views/OrdersView";
+import MainLayout from "Frontend/views/Layouts/MainLayout";
+
 
 
 const router = createBrowserRouter([
-    { path: '/', element: <AppView/>},
+    { path: '/', element: <MainLayout/>},
+    { path: '/orders', element: <OrdersView/>},
 ]);
 
 export default router;
