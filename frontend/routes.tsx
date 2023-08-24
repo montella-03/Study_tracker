@@ -1,8 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
-import {TodoView} from "Frontend/views/TodoView.js";
+import AppView from "Frontend/views/AppView";
+
 
 const router = createBrowserRouter([
-    { path: '/', element: <TodoView/>},
+    { path: '/', element: <AppView/>},
 ]);
 
 export default router;
