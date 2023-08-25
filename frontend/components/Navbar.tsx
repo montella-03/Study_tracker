@@ -22,7 +22,6 @@ const Navbar= ({title,topics}: NavbarProps) => {
                         <a tabIndex={-1}>{topic}</a>
                     </Tab>
                 ))}
-                {/* begin::snippet[] */}
             </Tabs>
         </div>
     )
