@@ -37,11 +37,14 @@
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "4.0.0",
     "async": "3.2.2",
+    "autoprefixer": "^10.4.15",
     "glob": "7.2.3",
     "mkdirp": "1.0.4",
+    "postcss": "^8.4.28",
     "rollup-plugin-brotli": "3.1.0",
     "rollup-plugin-visualizer": "5.9.0",
     "strip-css-comments": "5.0.0",
+    "tailwindcss": "^3.3.3",
     "transform-ast": "2.4.4",
     "typescript": "5.0.4",
     "vite": "4.3.9",
@@ -95,7 +98,7 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "ca8ba8a54691260784a7262c6fa3238b63aabcd2c3eadfa341a30753ee8cd67e"
+    "hash": "a95723cbc2f3e7609e094c1e6f417f4f73c87dd332df69738277d0f9810214ac"
   },
   "overrides": {
     "@vaadin/bundles": "$@vaadin/bundles",

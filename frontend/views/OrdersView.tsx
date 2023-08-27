@@ -5,13 +5,6 @@ import {Notification} from "@hilla/react-components/Notification";
 
 const topics = ["All", "Pending", "Completed", "Cancelled"];
 const OrdersView = () => {
-    const handleClick=()=> {
-        return(
-        <Notification>
-            <p>Clicked</p>
-        </Notification>
-        )
-    }
 
     return (
         <MainLayout>
