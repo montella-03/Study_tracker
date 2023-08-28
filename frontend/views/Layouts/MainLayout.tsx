@@ -13,6 +13,7 @@ const MainLayout=({children}:Children)=> {
         <AppLayout primarySection="drawer" className={"p-m"}>
             <Header/>
             {children}
+
         </AppLayout>
 
     );
